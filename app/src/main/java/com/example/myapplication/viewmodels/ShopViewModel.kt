@@ -5,7 +5,7 @@ import androidx.lifecycle.AndroidViewModel
 import com.example.myapplication.data.database.getItemDatabase
 import com.example.myapplication.remote.ShopRepository
 
-class viewModel(application: Application) : AndroidViewModel(application) {
+class ShopViewModel(application: Application) : AndroidViewModel(application) {
 
     private val itemDatabase = getItemDatabase(application)
     private val repository = ShopRepository(itemDatabase)
