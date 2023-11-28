@@ -1,19 +1,19 @@
 package com.example.myapplication.remote
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.myapplication.data.database.ItemDatabase
-import com.example.myapplication.datamodels.Items
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
+import com.example.myapplication.datamodels.Product
 
-class AppRepository(private val database: ItemDatabase) {
+class ShopRepository(private val database: ItemDatabase) {
 
-    private val _items = MutableLiveData<List<Items>>()
+    private val _product = MutableLiveData<List<Product>>()
 
-    val items: LiveData<List<Items>>
-        get() = _items
+    val product: LiveData<List<Product>>
+        get() = _product
 
+    fun getProducts(): List<Product>? {
+      return null
+    }
 /*    suspend fun getItems() {
         try {
             //val itemData = api.retrofitService.getFact()

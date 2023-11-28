@@ -4,11 +4,11 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.myapplication.datamodels.Items
+import com.example.myapplication.datamodels.Product
 
-@Database(entities = [Items::class], version = 1)
+@Database(entities = [Product::class], version = 1)
 abstract class ItemDatabase : RoomDatabase() {
-    abstract val dao: Itemdatabasedao
+    abstract val dao: ProductDatabaseDao
 }
 
 private lateinit var INSTANCE : ItemDatabase
